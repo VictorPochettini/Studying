@@ -1,10 +1,21 @@
-#renatocamposmauro
-{
-    display : block;
-    margin : 0 auto;
-    width : 1000px;
+/* Estilos padrão (light mode) */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-body
-{
-    font-family : Arial, sans-serif;
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-toggle {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #333;
+    color: white;
 }
