@@ -1,0 +1,57 @@
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\appsettings.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.staticwebassets.endpoints.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.exe
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.deps.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.runtimeconfig.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.dll
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.pdb
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.AssemblyInfoInputs.cache
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.AssemblyInfo.cs
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.csproj.CoreCompileInputs.cache
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\scopedcss\bundle\Exercício1.styles.css
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.dll
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\refint\Exercício1.dll
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.pdb
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.genruntimeconfig.cache
+C:\Users\victor.costa\Documents\Códigos\Exercício1\Exercício1\obj\Debug\net8.0\ref\Exercício1.dll
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\appsettings.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.staticwebassets.endpoints.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.exe
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.deps.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.runtimeconfig.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.dll
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\bin\Debug\net8.0\Exercício1.pdb
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.AssemblyInfoInputs.cache
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.AssemblyInfo.cs
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.csproj.CoreCompileInputs.cache
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.sourcelink.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\scopedcss\bundle\Exercício1.styles.css
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.dll
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\refint\Exercício1.dll
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.pdb
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\Exercício1.genruntimeconfig.cache
+C:\Users\victor.costa\Documents\Códigos\WebDev-Study\ASP.NET in Action\Exercício1\Exercício1\obj\Debug\net8.0\ref\Exercício1.dll
