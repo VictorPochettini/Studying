@@ -31,7 +31,19 @@ fn main()
 
         println!("Deseja (1)Alterar (2)Continuar:");
 
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read line");
 
+        if(input == "2")
+        {
+            break;
+        }
+        else if(input != "1")
+        {
+            println!("Entrada inválida. Insira outro valor");
+            continue;
+        }
     }
     
 }
