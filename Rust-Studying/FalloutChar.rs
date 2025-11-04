@@ -15,7 +15,7 @@ fn main()
     println!("Welcome to the Fallout character creator");
     loop 
     {
-        println!("Aqui estão seus atributos atuais:");
+        println!("Aqui estão seus atributos atuais:\n");
 
         println!("STR: {}", STR);
         println!("PER: {}", PER);
