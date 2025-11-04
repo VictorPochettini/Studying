@@ -1,3 +1,5 @@
+use std::io;
+
 fn main()
 {
     let mut estado= 0;
@@ -12,6 +14,8 @@ fn main()
 
     let mut skills = [&STR, &PER, &END, &CHA, &INT, &AGY, &LUC];
 
+    let mut input = String::new();
+
     println!("Welcome to the Fallout character creator");
     loop 
     {
@@ -24,6 +28,10 @@ fn main()
         println!("INT: {}", INT);
         println!("AGY: {}", AGY);
         println!("LUC: {}", LUC);
+
+        println!("Deseja (1)Alterar (2)Continuar:");
+
+
     }
     
 }
