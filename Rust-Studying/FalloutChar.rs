@@ -11,10 +11,12 @@ fn main()
     let mut INT = 5;
     let mut AGY = 5;
     let mut LUC = 5;
-
+    
     let mut skills = [&STR, &PER, &END, &CHA, &INT, &AGY, &LUC];
 
     let mut input = String::new();
+    let mut strChange = String::new();
+    let mut change : i32;
 
     println!("Welcome to the Fallout character creator");
     loop 
@@ -44,6 +46,11 @@ fn main()
             println!("Entrada inválida. Insira outro valor");
             continue;
         }
+        io::stdin()
+            .read_line(&mut strChange)
+            .expect("Failed to read line");
+
+        change = strChange.parse();
     }
     
 }
