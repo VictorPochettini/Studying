@@ -12,6 +12,8 @@ fn main()
     let mut AGY = 5;
     let mut LUC = 5;
 
+    let mut array[7] = [&STR, &PER, &END, &CHA, &INT, &AGY, &LUC];
+
     let mut input = String::new();
     let mut strChange = String::new();
     let mut change : i32;
@@ -63,6 +65,19 @@ fn main()
         io::stdin()
             .read_line(&mut strSkill)
             .expect("Failed to read line");
+
+        skill = strSkill.parse() - 1;
+        let newSkill = *array[skill] + change;
+
+        if(skill > 6 || skill < 0 || newSkill > 10 || newSkill < 1)
+        {
+            println!("Invalid option\n\n");
+            continue;
+        }
+        else
+        {
+            *array[skill] += change;
+        }
 
     }
     
