@@ -11,8 +11,6 @@ fn main()
     let mut INT = 5;
     let mut AGY = 5;
     let mut LUC = 5;
-    
-    let mut skills = [&STR, &PER, &END, &CHA, &INT, &AGY, &LUC];
 
     let mut input = String::new();
     let mut strChange = String::new();
