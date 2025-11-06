@@ -2,7 +2,7 @@ use std::io;
 
 fn main()
 {
-    let mut estado= 0;
+    let mut state = 0;
 
     let mut STR = 5;
     let mut PER = 5;  
@@ -15,11 +15,12 @@ fn main()
     let mut input = String::new();
     let mut strChange = String::new();
     let mut change : i32;
+    let mut skill = String::new();
 
     println!("Welcome to the Fallout character creator");
     loop 
     {
-        println!("Aqui estão seus atributos atuais:\n");
+        println!("Current atributes:\n");
 
         println!("STR: {}", STR);
         println!("PER: {}", PER);
@@ -29,7 +30,7 @@ fn main()
         println!("AGY: {}", AGY);
         println!("LUC: {}", LUC);
 
-        println!("Deseja (1)Alterar (2)Continuar:");
+        println!("(1)Change (2)Continue:");
 
         io::stdin()
             .read_line(&mut input)
@@ -41,7 +42,7 @@ fn main()
         }
         else if(input != "1")
         {
-            println!("Entrada inválida. Insira outro valor");
+            println!("Invalid input. Please insert another entry!");
             continue;
         }
         io::stdin()
