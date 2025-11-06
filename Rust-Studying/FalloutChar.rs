@@ -15,7 +15,9 @@ fn main()
     let mut input = String::new();
     let mut strChange = String::new();
     let mut change : i32;
-    let mut skill = String::new();
+    let mut strSkill = String::new();
+    let mut skill : i32;
+    let mut points : i32;
 
     println!("Welcome to the Fallout character creator");
     loop 
@@ -42,7 +44,7 @@ fn main()
         }
         else if(input != "1")
         {
-            println!("Invalid input. Please insert another entry!");
+            println!("Invalid input. Please insert another entry!\n\n");
             continue;
         }
         io::stdin()
@@ -50,6 +52,18 @@ fn main()
             .expect("Failed to read line");
 
         change = strChange.parse();
+
+        if((change > 0 && change > points) || change < 0 || change > 10)
+        {
+            println!("Invalid option\n\n");
+            continue;
+        }
+
+        println!("Which skill would you like to change?\n(1)STR (2)PER (3)END (4)CHA (5)INT (6)AGY (7) LUC");
+        io::stdin()
+            .read_line(&mut strSkill)
+            .expect("Failed to read line");
+
     }
     
 }
