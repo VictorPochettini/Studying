@@ -12,7 +12,7 @@ fn main()
     let mut AGY = 5;
     let mut LUC = 5;
 
-    let mut array[7] = [&STR, &PER, &END, &CHA, &INT, &AGY, &LUC];
+    let mut array = [&STR, &PER, &END, &CHA, &INT, &AGY, &LUC];
 
     let mut input = String::new();
     let mut strChange = String::new();
