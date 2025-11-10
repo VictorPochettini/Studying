@@ -66,6 +66,10 @@ fn main()
 
         skill = strSkill.parse() - 1;
 
+        match skill
+        {
+            _ => println!("Invalid option");
+        }
     }
     
 }
