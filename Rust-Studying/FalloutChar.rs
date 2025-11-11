@@ -68,6 +68,7 @@ fn main()
 
         match skill
         {
+            1 => STR += change
             _ => println!("Invalid option");
         }
     }
