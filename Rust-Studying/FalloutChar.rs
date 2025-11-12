@@ -38,6 +38,8 @@ fn main()
             .read_line(&mut input)
             .expect("Failed to read line");
 
+        input = input.trim();
+        
         if(input == "2")
         {
             break;
@@ -63,14 +65,22 @@ fn main()
         io::stdin()
             .read_line(&mut strSkill)
             .expect("Failed to read line");
-
+        
         skill = strSkill.parse() - 1;
 
         match skill
         {
-            1 => STR += change
+            1 => STR
+            2 => PER
+            3 => END
+            4 => CHA
+            5 => INT
+            6 => AGY
+            7 => LUC
             _ => println!("Invalid option");
         }
+
+
     }
     
 }
