@@ -33,18 +33,18 @@ fn main()
         println!("LUC: {}", LUC);
 
         println!("(1)Change (2)Continue:");
-
+    
         io::stdin()
             .read_line(&mut input)
             .expect("Failed to read line");
 
-        input = input.trim();
+        let input_trimmed = input.trim();
         
-        if(input == "2")
+        if(input_trimmed == "2")
         {
             break;
         }
-        else if(input != "1")
+        else if(input_trimmed != "1")
         {
             println!("Invalid input. Please insert another entry!\n\n");
             continue;
@@ -66,17 +66,22 @@ fn main()
             .read_line(&mut strSkill)
             .expect("Failed to read line");
         
-        skill = strSkill.parse() - 1;
+        skill = match str_skill.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Invalid number!\n");
+                continue;
+            }
 
         match skill
         {
-            1 => STR
-            2 => PER
-            3 => END
-            4 => CHA
-            5 => INT
-            6 => AGY
-            7 => LUC
+            1 => STR,
+            2 => PER,
+            3 => END,
+            4 => CHA,
+            5 => INT,
+            6 => AGY,
+            7 => LUC,
             _ => println!("Invalid option");
         }
 
@@ -90,13 +95,13 @@ fn main()
 
         match skill
         {
-            1 => STR += change
-            2 => PER += change
-            3 => END += change
-            4 => CHA += change
-            5 => INT += change
-            6 => AGY += change
-            7 => LUC += change
+            1 => STR += change,
+            2 => PER += change,
+            3 => END += change,
+            4 => CHA += change,
+            5 => INT += change,
+            6 => AGY += change,
+            7 => LUC += change,
         }
 
     }
