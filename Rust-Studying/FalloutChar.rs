@@ -2,7 +2,6 @@ use std::io;
 
 fn main()
 {
-    let mut state = 0;
 
     let mut STR = 5;
     let mut PER = 5;  
@@ -32,6 +31,8 @@ fn main()
         println!("AGY: {}", AGY);
         println!("LUC: {}", LUC);
 
+        println!("\n\nPoints remaining: {}", points);
+
         println!("(1)Change (2)Continue:");
 
         input.clear();
@@ -56,15 +57,16 @@ fn main()
             .read_line(&mut strChange)
             .expect("Failed to read line");
 
-        change = strChange.trim().parse()
+        change = match strChange.trim().parse::<i32>()
         {
             Ok(num) => num,
             Err(_) => {
                 println!("Invalid number!\n");
                 continue;
+            }
         };
 
-        if((change > 0 && change > points) || change < 0 || change > 10)
+        if(change > points)
         {
             println!("Invalid option\n\n");
             continue;
@@ -77,14 +79,15 @@ fn main()
             .read_line(&mut strSkill)
             .expect("Failed to read line");
         
-        skill = match str_skill.trim().parse() {
+        skill = match strSkill.trim().parse::<i32>() {
             Ok(num) => num,
             Err(_) => {
                 println!("Invalid number!\n");
                 continue;
             }
+        };
 
-        match skill
+        let currentValue = match skill
         {
             1 => STR,
             2 => PER,
@@ -93,12 +96,12 @@ fn main()
             5 => INT,
             6 => AGY,
             7 => LUC,
-            _ => println!("Invalid option");
-        }
+            _ => {println!("Invalid option"); continue;}
+        };
 
-        let currentValue = skill + change;
+        let newValue = currentValue + change;
 
-        if(currentValue > 10 || currentValue < 0)
+        if(newValue > 10 || newValue < 0)
         {
             println!("You can't have a skill lower than 0 and higher than 10");
             continue;
@@ -115,7 +118,7 @@ fn main()
             5 => INT += change,
             6 => AGY += change,
             7 => LUC += change,
-        }
+        };
 
     }
     
