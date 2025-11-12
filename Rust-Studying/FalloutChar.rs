@@ -80,6 +80,24 @@ fn main()
             _ => println!("Invalid option");
         }
 
+        let currentValue = skill + change;
+
+        if(currentValue > 10 || currentValue < 0)
+        {
+            println!("You can't have a skill lower than 0 and higher than 10");
+            continue;
+        }
+
+        match skill
+        {
+            1 => STR += change
+            2 => PER += change
+            3 => END += change
+            4 => CHA += change
+            5 => INT += change
+            6 => AGY += change
+            7 => LUC += change
+        }
 
     }
     
