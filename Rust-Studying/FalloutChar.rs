@@ -33,7 +33,8 @@ fn main()
         println!("LUC: {}", LUC);
 
         println!("(1)Change (2)Continue:");
-    
+
+        input.clear();
         io::stdin()
             .read_line(&mut input)
             .expect("Failed to read line");
@@ -49,6 +50,8 @@ fn main()
             println!("Invalid input. Please insert another entry!\n\n");
             continue;
         }
+
+        strChange.clear();
         io::stdin()
             .read_line(&mut strChange)
             .expect("Failed to read line");
@@ -62,6 +65,8 @@ fn main()
         }
 
         println!("Which skill would you like to change?\n(1)STR (2)PER (3)END (4)CHA (5)INT (6)AGY (7) LUC");
+
+        strSkill.clear();
         io::stdin()
             .read_line(&mut strSkill)
             .expect("Failed to read line");
