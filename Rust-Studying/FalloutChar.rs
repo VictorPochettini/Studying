@@ -56,7 +56,13 @@ fn main()
             .read_line(&mut strChange)
             .expect("Failed to read line");
 
-        change = strChange.parse();
+        change = strChange.trim().parse()
+        {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Invalid number!\n");
+                continue;
+        };
 
         if((change > 0 && change > points) || change < 0 || change > 10)
         {
