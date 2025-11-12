@@ -17,7 +17,7 @@ fn main()
     let mut change : i32;
     let mut strSkill = String::new();
     let mut skill : i32;
-    let mut points : i32;
+    let mut points : i32 = 5;
 
     println!("Welcome to the Fallout character creator");
     loop 
@@ -103,6 +103,8 @@ fn main()
             println!("You can't have a skill lower than 0 and higher than 10");
             continue;
         }
+
+        points -= change;
 
         match skill
         {
