@@ -8,7 +8,29 @@ typedef struct
 
 void criaArquivo()
 {
+    FILE* file = fopen("registro.txt", "wb");
 
+    if(!file)
+    {
+        return;
+    }
+
+    int qtd;
+    int size = sizeof(Registro);
+
+    scanf("%d", &qtd);
+
+    Registro reg[qtd];
+
+    for(int i = 0; i < qtd; i++)
+    {
+        scanf("%d", &reg[i].matricula);
+        scanf("%f", &reg[i].nota);
+
+        fwrite(&reg[i], size, 1, file);
+    }
+
+    fclose(file);
 }
 
 void listaRegistro()
