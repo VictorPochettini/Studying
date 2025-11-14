@@ -60,7 +60,37 @@ void listaRegistro()
 
 void buscaAluno()
 {
+    FILE* f = fopen("registro.txt", "rb");
 
+    if(!f)
+    {
+        return;
+    }
+
+    Registro reg;
+    int matricula;
+    int encontrado = 0;
+    int size = sizeof(Registro);
+    size_t r1;
+    scanf("%d", &matricula);
+
+    r1 = fread(&reg, size, 1, f);
+
+    while(r1 == 1)
+    {
+        if(matricula == reg.matricula)
+        {
+            printf("Encontrado!");
+            encontrado = 1;
+            break;
+        }
+        r1 = fread(&reg, size, 1 ,f);
+    }
+
+    if(!encontrado)
+        printf("Não encontrado");
+
+    fclose(f);
 }
 
 void atualizaNota()
