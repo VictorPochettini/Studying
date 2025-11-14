@@ -35,7 +35,27 @@ void criaArquivo()
 
 void listaRegistro()
 {
+    FILE* f = fopen("registro.txt", "rb");
 
+    if(!f)
+    {
+        return;
+    }
+
+    size_t r1;
+    int size = sizeof(Registro);
+    Registro reg;
+    r1 = fread(&reg, size, 1, f);
+
+    while(r1 == 1)
+    {
+        printf("===================================================\n");
+        printf("Matrícula:\t%d\n", reg.matricula);
+        printf("Nota:\t%f\n", reg.nota);
+        r1 = fread(&reg, size, 1, f);
+    }
+
+    fclose(f);
 }
 
 void buscaAluno()
