@@ -58,7 +58,7 @@ void listaRegistro()
     fclose(f);
 }
 
-void buscaAluno()
+FILE* buscaAluno()
 {
     FILE* f = fopen("registro.txt", "rb");
 
@@ -90,12 +90,22 @@ void buscaAluno()
     if(!encontrado)
         printf("Não encontrado");
 
-    fclose(f);
+    return f;
 }
 
 void atualizaNota()
 {
+    FILE* f = buscaAluno();
+    Registro reg;
+    int size = sizeof(Registro);
+    fread(&reg, size, 1, f);
+    fseek(f, -size, SEEK_CUR);
 
+    scanf("%d", &reg.nota);
+
+    fwrite(&reg, size, 1, f);
+
+    fclose(f);
 }
 
 void geraArqAprovados()
