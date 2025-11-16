@@ -60,7 +60,7 @@ void listaRegistro()
 
 FILE* buscaAluno()
 {
-    FILE* f = fopen("registro.txt", "rb");
+    FILE* f = fopen("registro.txt", "rb+");
 
     if(!f)
     {
@@ -110,7 +110,22 @@ void atualizaNota()
 
 void geraArqAprovados()
 {
+    FILE *f1 = fopen("registro.txt", "rb");
+    FILE *f2 = fopen("aprovados.txt", "wb");
+    size_t r1;
+    int size = sizeof(Registro);
+    Registro reg;
 
+    r1 = fread(&reg, size, 1, f1);
+
+    while(r1 == 1)
+    {
+        if(reg.nota >= 6.0)
+        {
+            fwrite(&reg, size, 1, f2);
+        }
+        r1 = fread(&reg, size, 1, f1);
+    }
 }
 
 void ordenaMatricula()
