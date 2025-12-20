@@ -1,159 +1,101 @@
 #include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/stat.h>
 
-typedef struct
-{
-    int matricula;
-    float nota;
+typedef struct 
+{ 
+    int matricula; 
+    float nota; 
 } Registro;
 
-void criaArquivo()
+void cria_arquivo(char *nome_arquivo)
 {
-    FILE* file = fopen("registro.txt", "wb");
-
-    if(!file)
-    {
-        return;
-    }
-
+    int fd = open(nome_arquivo, O_RDWR | O_CREAT);
+    if(fd < 0) perror("Erro ao criar arquivo");
     int qtd;
-    int size = sizeof(Registro);
 
     scanf("%d", &qtd);
-
-    Registro reg[qtd];
+    Registro buffer[qtd];
 
     for(int i = 0; i < qtd; i++)
     {
-        scanf("%d", &reg[i].matricula);
-        scanf("%f", &reg[i].nota);
-
-        fwrite(&reg[i], size, 1, file);
+        scanf("%d", &buffer[i].matricula);
+        scanf("%f", &buffer[i].nota);
     }
 
-    fclose(file);
+    write(fd, buffer, sizeof(Registro) * qtd);
 }
 
-void listaRegistro()
+void lista_registro(char *nome_arquivo)
 {
-    FILE* f = fopen("registro.txt", "rb");
+    int fd = open(nome_arquivo, O_RDWR);
 
-    if(!f)
+    if(fd < 0) perror("Erro ao abrir arquivo");
+    
+    size_t size = sizeof(Registro);
+    struct stat st;
+    fstat(fd, &st);
+    size_t total_size = st.st_size;
+    unsigned int quantidade = total_size/size;
+    
+    Registro buffer[quantidade];
+
+    read(fd, buffer, total_size);
+
+    for(int i = 0; i < quantidade; i++)
     {
-        return;
+        printf("%d", buffer[i].matricula);
+        printf("%f", buffer[i].nota);
     }
-
-    size_t r1;
-    int size = sizeof(Registro);
-    Registro reg;
-    r1 = fread(&reg, size, 1, f);
-
-    while(r1 == 1)
-    {
-        printf("===================================================\n");
-        printf("Matrícula:\t%d\n", reg.matricula);
-        printf("Nota:\t%f\n", reg.nota);
-        r1 = fread(&reg, size, 1, f);
-    }
-
-    fclose(f);
 }
 
-FILE* buscaAluno()
+FILE* busca_aluno(char* nome_arquivo, int matricula)
 {
-    FILE* f = fopen("registro.txt", "rb+");
+    int fd = open(nome_arquivo, O_RDWR);
+    if (fd < 0) return NULL;
 
-    if(!f)
-    {
-        return;
+    struct stat st;
+    if (fstat(fd, &st) < 0) {
+        close(fd);
+        return NULL;
+    }
+    
+    size_t quantidade = st.st_size / sizeof(Registro);
+    Registro *buffer = malloc(st.st_size);
+    if (!buffer) {
+        close(fd);
+        return NULL;
+    }
+    
+    if (read(fd, buffer, st.st_size) < 0) {
+        free(buffer);
+        close(fd);
+        return NULL;
     }
 
-    Registro reg;
-    int matricula;
-    int encontrado = 0;
-    int size = sizeof(Registro);
-    size_t r1;
-    scanf("%d", &matricula);
-
-    r1 = fread(&reg, size, 1, f);
-
-    while(r1 == 1)
+    for(size_t i = 0; i < quantidade; i++)
     {
-        if(matricula == reg.matricula)
+        if(buffer[i].matricula == matricula)
         {
-            printf("Encontrado!");
-            encontrado = 1;
-            break;
+            // Reposiciona o fd para o registro encontrado
+            off_t posicao = i * sizeof(Registro);
+            lseek(fd, posicao, SEEK_SET);
+            
+            FILE* f = fdopen(fd, "r+b");
+            free(buffer);
+            return f;
         }
-        r1 = fread(&reg, size, 1 ,f);
     }
 
-    if(!encontrado)
-        printf("Não encontrado");
-
-    return f;
+    free(buffer);
+    close(fd);
+    return NULL;
 }
 
-void atualizaNota()
+int main(int argc, char* argv)
 {
-    FILE* f = buscaAluno();
-    Registro reg;
-    int size = sizeof(Registro);
-    fread(&reg, size, 1, f);
-    fseek(f, -size, SEEK_CUR);
-
-    scanf("%d", &reg.nota);
-
-    fwrite(&reg, size, 1, f);
-
-    fclose(f);
-}
-
-void geraArqAprovados()
-{
-    FILE *f1 = fopen("registro.txt", "rb");
-    FILE *f2 = fopen("aprovados.txt", "wb");
-    size_t r1;
-    int size = sizeof(Registro);
-    Registro reg;
-
-    r1 = fread(&reg, size, 1, f1);
-
-    while(r1 == 1)
-    {
-        if(reg.nota >= 6.0)
-        {
-            fwrite(&reg, size, 1, f2);
-        }
-        r1 = fread(&reg, size, 1, f1);
-    }
-}
-
-void ordenaMatricula()
-{
-
-}
-
-int main(int argc, char *argv[])
-{
-    int option;
-
-    scanf("%d", &option);
-
-    switch(option)
-    {
-        case 1:
-            criaArquivo();
-        case 2:
-            listaRegistro();
-        case 3:
-            buscaAluno();
-        case 4:
-            atualizaNota();
-        case 5:
-            geraArqAprovados();
-        case 6:
-            ordenaMatricula();
-    }
 
     return 0;
 }
