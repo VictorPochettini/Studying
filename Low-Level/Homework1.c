@@ -15,7 +15,16 @@
  * ======================================== */
 
 void show_bytes(void *start, size_t len) {
-    // TODO: Implemente
+    // TODO: Complete esta função para mostrar a representação em bytes
+    // de um inteiro. Lembre-se: cada byte tem 8 bits.
+
+    unsigned char* resultado = (unsigned char*) start;
+
+    for(int i = 0; i < len; i++)
+    {
+        printf("%,2x", resultado[i]);
+    }
+    
 }
 
 /* ========================================
@@ -23,8 +32,13 @@ void show_bytes(void *start, size_t len) {
  * ======================================== */
 
 int is_little_endian() {
-    // TODO: Implemente
-    return 0;
+    // TODO: Escreva uma função que detecta se a máquina é little-endian
+    // ou big-endian
+
+    int x = 1;
+    unsigned char* p = &x;
+
+    return p[0] == 1;
 }
 
 /* ========================================
