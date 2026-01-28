@@ -46,8 +46,14 @@ int is_little_endian() {
  * ======================================== */
 
 int get_bit(int x, int n) {
-    // TODO: Implemente
-    return 0;
+    // TODO: Implemente uma função que retorna o bit na posição n
+    // Posições vão de 0 (LSB - bit menos significativo) a 31 (MSB)
+
+    int y = x >> n;
+
+    return y % 2;
+
+    //Podia também ter feito return x >> n & 1
 }
 
 int set_bit(int x, int n) {
